@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 20px 0;
+}
+.name:hover{
+    color: rgb(94, 220, 15);
+  }
+  .title:hover{
+    color: rgb(52, 209, 25);
+  }
+.profile-image:hover{
+    border: 3px solid rgb(9, 9, 9);
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.profile-card, .skills, .contacts {
+    background-color: #b3e5fc;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+.profile-card {
+    background-color: #81d4fa;
+}
+
+.skills {
+    background-color: #64b5f6;
+}
+
+.contacts {
+    background-color: #4fc3f7;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-weight: bold;
+    position: relative;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+ 
+.skills ul, .contacts ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    
+}
+
+.skills li, .contacts li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+   
+}
+
+.skills li img, .contacts li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+}
+
+
+.check {
+    font-size: 1.2em;
+}
+
+.profile-card::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover::before {
+    transform: scale(1.05);
+}
+
+.skills::before, .contacts::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    transition: all 0.3s ease;
+       
+}
+
+.skills:hover::before, .contacts:hover::before {
+    transform: scale(1.05);
+}
